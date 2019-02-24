@@ -171,6 +171,13 @@
   dependencies:
     tslib "^1.9.0"
 
+"@angular/http@^7.2.6":
+  version "7.2.6"
+  resolved "http://npmjs.pik.ru/@angular%2fhttp/-/http-7.2.6.tgz#13cdddb561bc54d98efa5279221707eca064f5ae"
+  integrity sha512-B5TC8JFW/I+ms5iJthGjf/eg1tKKqpO6yrOpDSQofHG7Dd4dozyGXGznFJTRFfNda5rku61/qnQaa8SyQyuplQ==
+  dependencies:
+    tslib "^1.9.0"
+
 "@angular/language-service@~7.2.0":
   version "7.2.6"
   resolved "http://npmjs.pik.ru/@angular%2flanguage-service/-/language-service-7.2.6.tgz#cc4fc6427667c57f3745de889d30bd751bb4c325"

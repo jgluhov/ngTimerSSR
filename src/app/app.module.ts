@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
   ],
   imports: [
     CommonModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'app-root' }),
     AppRoutingModule
   ],
   providers: [],
