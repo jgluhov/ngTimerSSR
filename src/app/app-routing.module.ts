@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { CounterComponent } from './counter/counter.component';
 
 const routes: Routes = [
   {
@@ -10,8 +11,11 @@ const routes: Routes = [
   },
   {
     path: 'timer',
-    loadChildren: './time/time.module#TimeModule',
-    pathMatch: 'full'
+    loadChildren: './time/time.module#TimeModule'
+  },
+  {
+    path: 'counter',
+    component: CounterComponent
   }
 ];
 

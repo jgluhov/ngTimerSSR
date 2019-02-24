@@ -1,5 +1,5 @@
-<ng-container [ngSwitch]="currentRoutePath$ | async">
-  <button *ngSwitchCase="'/'"
+<ng-container *ngIf="(currentRoutePath$ | async) as currentRoutePath">
+  <button *ngIf="currentRoutePath !== '/timer'"
     type="button"
     [routerLink]="['/timer']"
     routerLinkActive="router-link-active"
@@ -7,13 +7,21 @@
     [routerLinkActiveOptions]="{exact: true}">
     Go to Timer
   </button>
-  <button *ngSwitchCase="'/timer'"
+  <button *ngIf="currentRoutePath !== '/'"
     type="button"
     [routerLink]="['/']"
     routerLinkActive="router-link-active"
     [routerLinkActiveOptions]="{exact: true}"
     #rlah="routerLinkActive">
     Go Home
+  </button>
+  <button *ngIf="currentRoutePath !== '/counter'"
+    type="button"
+    [routerLink]="['/counter']"
+    routerLinkActive="router-link-active"
+    [routerLinkActiveOptions]="{exact: true}"
+    #rlah="routerLinkActive">
+    Go Counter
   </button>
 </ng-container>
 
