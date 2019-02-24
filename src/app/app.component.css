@@ -1,4 +1,4 @@
-:host button.router-link-active {
+:host button:not(.router-link-active) {
   background-color: yellow;
   outline: none;
 }

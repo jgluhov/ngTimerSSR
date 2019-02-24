@@ -1,16 +1,23 @@
-<button type="button"
-  [routerLink]="['/timer']"
-  routerLinkActive="router-link-active"
-  #rlat="routerLinkActive"
-  [routerLinkActiveOptions]="{exact: true}">
-  Go to Timer Go Home [ isActive {{ rlat.isActive }} ]
-</button>
-<button type="button"
-  [routerLink]="['/']"
-  routerLinkActive="router-link-active"
-  [routerLinkActiveOptions]="{exact: true}"
-  #rlah="routerLinkActive">
-  Go Home [ isActive {{ rlah.isActive }} ]
-</button>
+<ng-container [ngSwitch]="currentRoutePath$ | async">
+  <button *ngSwitchCase="'/'"
+    type="button"
+    [routerLink]="['/timer']"
+    routerLinkActive="router-link-active"
+    #rlat="routerLinkActive"
+    [routerLinkActiveOptions]="{exact: true}">
+    Go to Timer
+  </button>
+  <button *ngSwitchCase="'/timer'"
+    type="button"
+    [routerLink]="['/']"
+    routerLinkActive="router-link-active"
+    [routerLinkActiveOptions]="{exact: true}"
+    #rlah="routerLinkActive">
+    Go Home
+  </button>
+</ng-container>
+
+
+
 
 <router-outlet></router-outlet>
